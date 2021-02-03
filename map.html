@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- apiKey -->
+    <!-- AIzaSyCq69s-N1C8sggOeWFqhQWXNlxCtLjHNzs -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>googleMap-API</title>
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <button onclick="center()"> <img class="loc-img" src="img/location.png" width="100px" >  </button>
+    <h1 class="text-center">Google Map API</h1>
+    <div id="map" style="width: 100%; height: 500px"></div>
+    <h2>Current Position:</h2>
+    <table class="table" border="1">
+        <thead>
+
+      <tr>
+          <th>Latitude</th>
+          <th>longitude</th>
+          <th>Place</h>
+      </tr>
+    </thead>
+    <tbody class="table-input"></tbody> 
+    </table>
+
+    <p id="locationError"></p>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq69s-N1C8sggOeWFqhQWXNlxCtLjHNzs&callback=initMap"
+    ></script>
+
+    <script type="text/javascript" src="js/utilService.js"></script>
+    <script type="text/javascript" src="js/storage-service.js"></script>
+    <script type="text/javascript" src="js/index/index-service.js"></script>
+    <script type="text/javascript" src="js/index/index-controller.js"></script>
+    <script type="text/javascript" src="js/map/place-service.js"></script>
+    <script
+      type="text/javascript"
+      src="js/map/place-keeper-controller.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/userPref/userpref-service.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/userPref/userpref-controller.js"
+    ></script>
+  </body>
+</html>
